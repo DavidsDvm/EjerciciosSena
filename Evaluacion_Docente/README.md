@@ -1,2 +1,0 @@
-# Readme file
-Ejercicios sena
