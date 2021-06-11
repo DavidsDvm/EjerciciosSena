@@ -6,11 +6,11 @@ var data3 = new Array();
 var data4 = new Array();
 var idNumberTable = 0;
 arrHead = ['#', 'Producto', 'Precio con iva', 'porcentaje iva', 'cantidad', 'subtotal', 'valor iva', 'total', '<div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example"><button type="button" class="btn btn-success" id="addNewItem" onclick="addNewUsuer()">Agregar</button></div>']; // table headers.
-data0 = ['Computador Hacer', '1800000', '15', '1'];
-data1 = ['Papas Francesas ', '10450', '19', '1'];
-data2 = ['Mesas de noche', '400000', '10', '3'];
-data3 = ['Cobijas seda fina', '60000', '14', '5'];
-data4 = ['Galletas wafer Cocosette', '7900', '16', '2'];
+data0 = ['Harry Potter Ultimate Edition', '1800000', '15', '1'];
+data1 = ['El Alquimista', '10450', '19', '1'];
+data2 = ['El Código da Vinci', '400000', '10', '3'];
+data3 = ['Crepúsculo', '60000', '14', '5'];
+data4 = ['Lo que el viento se llevó', '7900', '16', '2'];
 
 // first create a TABLE structure by adding few headers.
 function createTable() {
