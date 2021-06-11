@@ -14,9 +14,9 @@ arrHead = ['#', 'Cedula', 'Nombre', 'Sueldo Mensual', 'Dias', 'Basico', 'Aux_tra
 // DNI - Nombre - Sueldo - Dias trabajados - Horas(no importa) - HEN - HEDD - HEDN - RECNOC - Hora(no importa)
 data0 = ['1030524257', 'David Sanchez', '20000000', '30', '15', '5', '9', '4', '1', '1'];
 data1 = ['1000365847', 'Vicente Ros', '1200000', '30', '15', '5', '9', '4', '1', '1'];
-data2 = ['1030524257', 'David Sanchez', '1500000', '30', '5', '6', '7', '7', '10', '10'];
-data3 = ['1030524257', 'David Sanchez', '1500000', '30', '5', '6', '7', '7', '10', '10'];
-data4 = ['1030524257', 'David Sanchez', '1500000', '30', '5', '6', '7', '7', '10', '10'];
+data2 = ['1030563328', 'Sheila Saez', '6000000', '30', '5', '6', '7', '7', '10', '10'];
+data3 = ['4512039698', 'Gustavo Padron', '2000000', '30', '5', '6', '7', '7', '10', '10'];
+data4 = ['7845123696', 'Evelyn Cañadas', '4000000', '30', '5', '6', '7', '7', '10', '10'];
 
 // first create a TABLE structure by adding few headers.
 function createTable() {
@@ -55,7 +55,7 @@ function addRow() {
   var HEEDPerson = document.getElementById('HEEDPerson').value;
   var HEDNPerson = document.getElementById('HEDNPerson').value;
   var nightHoursPerson = document.getElementById('nightHoursPerson').value;
-  
+
   // call tbody and count the rows
   var tbody = empTab.getElementsByTagName('tbody')[0];
   var rowCnt = empTab.rows.length;    // get the number of rows.
@@ -97,6 +97,23 @@ function addRow() {
       var saludPat = Math.ceil(((totalDeVengado-auxTrans)*4.5)/100);
       var pensionPat = Math.ceil((totalDeVengado*auxTrans)*0.12);
       var nivelRisgo = 2;
+
+      if (mensualSalary >= 3634104 && mensualSalary < 5451216){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.19);
+      }else if (mensualSalary >= 5451216 && mensualSalary < 12719504){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.28) + (UVT * 10);
+      }else if (mensualSalary >= 12719504 && mensualSalary < 16353648){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.33) + (UVT * 69);
+      }else if (mensualSalary >= 16353648 && mensualSalary < 22713400){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.35) + (UVT * 162);
+      }else if (mensualSalary >= 22713400 && mensualSalary < 33615832){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.37) + (UVT * 268);
+      }else if (mensualSalary >= 33615832 && mensualSalary < 83585312){
+        retefuente = Math.ceil((mensualSalary / UVT)*0.39) + (UVT * 770);
+      }else{
+        retefuente = 0;
+      }
+
 
       if (nivelRisgo == 1){
         arlPersona = Math.ceil((totalDeVengado-auxTrans)*0.00522);
@@ -165,7 +182,7 @@ function addRow() {
 
         td.innerHTML = rowDataArrays[c-1];
 
-        
+
       }
   }
 }
