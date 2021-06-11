@@ -268,6 +268,7 @@ function editRow(oButton) {
   HEDN.value = HEDNChange;
   nightHours.value = nightHoursChange;
 
+  empTab.deleteRow(oButton.parentNode.parentNode.parentNode.rowIndex);
   addNewUsuer();
 
 }
