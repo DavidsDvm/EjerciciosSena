@@ -1,49 +1,44 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="shortcut icon" href="#" />
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
+        <meta content="utf-8" http-equiv="encoding">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Login</title>
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/Bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/StyleIndex.css">
-        <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
-
+        <link rel="stylesheet" href="JS/Plugins/sweetalert2/sweetalert2.min.css">
     </head>
 
     <body>
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form validate-form" id="formLogin" action="" method="post">
+                    <span class="login-form-title">LOGIN</span>
 
-      <div class="container-login">
-        <div class="wrap-login">
-            <form class="login-form validate-form" id="formLogin" action="" method="post">
-                <span class="login-form-title">LOGIN</span>
-
-                <div class="wrap-input100" data-validate = "Usuario incorrecto">
-                    <input class="input100" type="text" id="usuario" name="usuario" placeholder="Usuario">
-                    <span class="focus-efecto"></span>
-                </div>
-
-                <div class="wrap-input100" data-validate="Password incorrecto">
-                    <input class="input100" type="password" id="password" name="password" placeholder="Password">
-                    <span class="focus-efecto"></span>
-                </div>
-
-                <div class="container-login-form-btn">
-                    <div class="wrap-login-form-btn">
-                        <div class="login-form-bgbtn"></div>
-                        <button type="submit" name="submit" class="login-form-btn">Ingresar</button>
+                    <div class="wrap-input100" data-validate = "Usuario incorrecto">
+                        <input class="input100" type="text" id="usuario" name="usuario" placeholder="Usuario">
+                        <span class="focus-efecto"></span>
                     </div>
-                </div>
-            </form>
+
+                    <div class="wrap-input100" data-validate="Password incorrecto">
+                        <input class="input100" type="password" id="password" name="password" placeholder="Password">
+                        <span class="focus-efecto"></span>
+                    </div>
+
+                    <div class="container-login-form-btn">
+                        <div class="wrap-login-form-btn">
+                            <div class="login-form-bgbtn"></div>
+                            <button type="button" class="login-form-btn" id="btn_form" onclick="myFunction()">Ingresar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
-
-
-     <script src="bootstrap/js/bootstrap.min.js"></script>
-     <script src="js/popper.min.js"></script>
-     <script src="JS/Plugins/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="CSS/Bootstrap/js/bootstrap.min.js"></script>
+        <script src="JS/popper.min.js"></script>
+        <script src="JS/Plugins/sweetalert2/sweetalert2.all.min.js"></script>
+        <script src="JS/JsLogin.js"></script>
     </body>
 </html>
