@@ -11,11 +11,11 @@
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="img/open-book.svg" sizes="32x32">
-    <link rel="icon" href="img/open-book.svg" sizes="16x16">
+    <link rel="icon" href="IMG/open-book.svg" sizes="32x32">
+    <link rel="icon" href="IMG/open-book.svg" sizes="16x16">
     <link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
     <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-    <link rel="icon" href="img/open-book.svg">
+    <link rel="icon" href="IMG/open-book.svg">
     <meta name="theme-color" content="#7952b3">
 
     <!-- Custom styles for this template -->
@@ -54,7 +54,7 @@
         <div class="container">
           <main>
             <div class="py-5 text-center">
-              <img class="d-block mx-auto mb-4" src="img/open-book.svg" alt="" width="72" height="57">
+              <img class="d-block mx-auto mb-4" src="IMG/open-book.svg" alt="" width="72" height="57">
               <h2>Formulario</h2>
               <p class="lead">Bienvenido a contiacion realizaras la nomina para tus empleados</p>
             </div>
@@ -67,7 +67,7 @@
                     <div class="col-12">
                       <label for="username" class="form-label">Cedula</label>
                       <div class="input-group has-validation">
-                        <input type="number" class="form-control" id="bookName" placeholder="Ingrese su cedula" required>
+                        <input type="number" class="form-control" id="idPerson" placeholder="Ingrese su cedula" required>
                         <div class="invalid-feedback">
                           No digitaste un nombre de articulo correcto!
                         </div>
@@ -77,7 +77,7 @@
                     <div class="col-12">
                       <label for="username" class="form-label">Nombre</label>
                       <div class="input-group has-validation">
-                        <input type="text" class="form-control" id="bookName" placeholder="Ingrese su nombre" required>
+                        <input type="text" class="form-control" id="namePerson" placeholder="Ingrese su nombre" required>
                         <div class="invalid-feedback">
                           No digitaste un nombre de articulo correcto!
                         </div>
@@ -87,7 +87,7 @@
                     <div class="col-4">
                       <label for="number" class="form-label">Saldo Mensual</label>
                       <div class="input-group has-validation">
-                        <input type="number" class="form-control" id="priceWthTax" placeholder="Ejemplo: 120.000" required>
+                        <input type="number" class="form-control" id="mensualSalary" placeholder="Ejemplo: 120.000" required>
                         <div class="invalid-feedback">
                           Porfavor ingresa un precio con iva valido!
                         </div>
@@ -96,7 +96,7 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">Dias</label>
-                      <input type="number" class="form-control" id="taxesPorcentaje" placeholder="Ejemplo: 20 - 30" required>
+                      <input type="number" class="form-control" id="daysWorked" placeholder="Ejemplo: 20 - 30" required>
                       <div class="invalid-feedback">
                         Porfavor ingresa un porcentaje de iva valido!.
                       </div>
@@ -104,7 +104,7 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">Horas Extras Diurnas</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: 3" required>
+                      <input type="number" class="form-control" id="extraHoursPerson" placeholder="Ejemplo: 3" required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
@@ -112,7 +112,7 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">HEN</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: " required>
+                      <input type="number" class="form-control" id="HENPerson" placeholder="Ejemplo: " required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
@@ -120,7 +120,7 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">HEDD</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: " required>
+                      <input type="number" class="form-control" id="HEEDPerson" placeholder="Ejemplo: " required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
@@ -128,24 +128,15 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">HEDN</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: " required>
-                      <div class="invalid-feedback">
-                        Porfavor ingresa una cantidad de libros valida!.
-                      </div>
-                    </div>
-
-
-                    <div class="col-4">
-                      <label for="address" class="form-label">HEDN</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: " required>
+                      <input type="number" class="form-control" id="HEDNPerson" placeholder="Ejemplo: " required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
                     </div>
 
                     <div class="col-4">
-                      <label for="address" class="form-label">HEDN</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: " required>
+                      <label for="address" class="form-label">HED</label>
+                      <input type="number" class="form-control" id="HEDPersona" placeholder="Ejemplo: " required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
@@ -153,12 +144,12 @@
 
                     <div class="col-4">
                       <label for="address" class="form-label">Horas Recargo Nocturno</label>
-                      <input type="number" class="form-control" id="quantityBooks" placeholder="Ejemplo: 3" required>
+                      <input type="number" class="form-control" id="nightHoursPerson" placeholder="Ejemplo: 3" required>
                       <div class="invalid-feedback">
                         Porfavor ingresa una cantidad de libros valida!.
                       </div>
                     </div>
-                  
+
                     <hr class="my-4">
 
                     <div class="input__main--button__group">
