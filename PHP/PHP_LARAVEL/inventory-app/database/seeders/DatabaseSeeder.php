@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
             BrandSeeder::class,
             CategoriesSeeder::class,
             ProductSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            InvoiceSeeder::class,
+            InvoiceDetailSeeder::class
         ]);
     }
 }
