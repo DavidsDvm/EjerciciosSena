@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\InvoiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,3 +31,6 @@ Route::post('/categories/Save', [CategoriesController::class, 'register'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/invoices', [InvoiceController::class, 'show']);
+Route::get('/invoice/form',[InvoiceController::class, 'form'])->name('invoice.form');
