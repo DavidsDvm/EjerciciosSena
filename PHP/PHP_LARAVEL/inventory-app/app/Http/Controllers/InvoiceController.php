@@ -17,4 +17,9 @@ class InvoiceController extends Controller
         $products = Product::all();
         return view('invoice.form', ['products' => $products]);
     }
+
+    function save(Request $request){
+        $invoice = [$request->product, $request->quantity, $request->price];
+        return dd($invoice);
+    }
 }
