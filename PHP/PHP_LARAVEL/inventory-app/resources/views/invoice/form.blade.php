@@ -14,7 +14,7 @@
     </div>
     <div class="row content">
         <div class="col-sm-3">
-            <select name="product[]" id="product" class="form-select product">
+            <select name="product[]" id="product1" class="form-select product" data-row="1">
                 <option value="">Seleccione un producto</option>
                 @foreach ($products as $product)
                     <option value="{{ $product->id }}"> {{ $product->Name }} </option>
@@ -22,13 +22,13 @@
             </select>
         </div>
         <div class="col-sm-3">
-            <input type="number" min="1" value="1" name="quantity[]" class="form-control quantity">
+            <input type="number" min="1" value="1" name="quantity[]" class="form-control quantity" id="quantity1">
         </div>
         <div class="col-sm-3">
-            <input type="number" name="price[]" class="form-control price">
+            <input type="number" name="price[]" class="form-control price" id="price1">
         </div>
         <div class="col-sm-3">
-            <input type="text" readonly class="form-control-plaintext totalProduct">
+            <input type="text" readonly class="form-control-plaintext totalProduct" id="totalProduct1">
         </div>
     </div>
 </form>
@@ -40,27 +40,28 @@
 @section('script')
     <script>
         const products = @json($products);
-        productList = document.querySelector('.product');
-        priceElement = document.querySelector('.price');
-        quantityElement = document.querySelector('.quantity');
+        var contador = 1;
+        let productList = document.querySelector('.product');
+        let priceElement = document.querySelector('.price');
+        const quantityElement = document.querySelector('.quantity');
 
-        // function init(){
-        //     arrProductList = document.querySelectorAll('#invoiceForm')
+        function init(){
+            contador = 1;
+            arrProductList = document.querySelectorAll('.product')
 
-        //     arrProductList.forEach(ProductList => {
-        //         console.log(ProductList.querySelector('.content').)
-        //         ProductList.addEventListener('change', (event) => {
-        //             productId = event.target.value
-        //             productSelected = products.filter( product => product.id == productId)
-        //             priceElement = ProductList.querySelector('.price')
-        //             priceElement.value = productSelected[0].Cost
-        //             console.log(priceElement)
+            arrProductList.forEach(ProductList => {
+                let priceElement = document.querySelector('#price'+contador);
+                ProductList.addEventListener('change', (event) => {
+                    productId = event.target.value
+                    productSelected = products.filter( product => product.id == productId)
+                    priceElement.value = productSelected[0].Cost
                                         
-        //             // totalProduct();
-        //         });
-        //     })
-        // }
-        // init()
+                    totalProduct();
+                });
+                contador++;
+            })
+        }
+        init()
                 
         function totalProduct(){           
             totalElement = document.querySelector('.totalProduct')
@@ -81,7 +82,7 @@
             fila.className = 'row';
             fila.innerHTML = 
                             `<div class="col-sm-3">
-                                <select name="product[]" id="product" class="form-select product">
+                                <select name="product[]" id="product${contador}" class="form-select product">
                                     <option value="">Seleccione un producto</option>
                                     @foreach ($products as $product)
                                         <option value="{{ $product->id }}"> {{ $product->Name }} </option>
@@ -89,13 +90,13 @@
                                 </select>
                             </div>
                             <div class="col-sm-3">
-                                <input type="number" min="1" value="1" name="quantity[]" class="form-control quantity">
+                                <input type="number" min="1" value="1" name="quantity[]" class="form-control quantity" id="quantity${contador}">
                             </div>
                             <div class="col-sm-3">
-                                <input type="number" name="price[]" class="form-control price">
+                                <input type="number" name="price[]" class="form-control price" id="price${contador}">
                             </div>
                             <div class="col-sm-3">
-                                <input type="text" readonly class="form-control-plaintext totalProduct">
+                                <input type="text" readonly class="form-control-plaintext totalProduct" id="totalProducto${contador}">
                             </div>`
 
             form = document.getElementById('invoiceForm');
